@@ -45,7 +45,7 @@
             margin: 30px 0;
         }
         .section h2 {
-            color: #008afe;
+            color: #007abc;
             font-size: 1.6em;
         }
         .section p {
@@ -55,13 +55,13 @@
             margin-top:6px;
         }
         .cta {
-            background-color: #008afe;
+            background-color: #007abc;
             color: white;
             padding: 1px;
             text-align: center;
             margin: 20px 0;
             font-size: 1.2em;
-            border-radius:8px;
+            border-radius:10px;
         }
         .cta p {
             color: white;
@@ -85,7 +85,7 @@
             border: 1px solid #ccc;
         }
         .register-form button {
-            background-color: #007acc;
+            background-color: #007abc;
             color: white;
             border: none;
             cursor: pointer;
@@ -154,6 +154,7 @@
             <form class="register-form" action="#" method="post">
                 <input type="text" name="name" placeholder="Nama Lengkap" required>
                 <input type="email" name="email" placeholder="Alamat Email" required>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="WhatsApp" required />
                 <button type="submit">SAYA SETUJU</button>
             </form>
         </section>
