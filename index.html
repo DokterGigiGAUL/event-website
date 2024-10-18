@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webinar Dental Hypnotherapy</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -152,7 +154,12 @@
     text-align: center;
     margin-top: 20px;
 }
-
+.button-table {
+    margin: 0 auto; /* Pusatkan tabel */
+}
+.button-table td {
+    padding: 5px; /* Beri jarak antar tombol */
+}        
 .whatsapp-button {
     background-color: #25D366; /* Warna hijau khas WhatsApp */
     color: white;
@@ -215,17 +222,23 @@
         
         <section class="cta-section">
             <h2>Kontak</h2>
-            <p>Butuh bantuan atau informasi lebih lanjut? Hubungi Mindok CALM via WhatsApp</p>
+            <p>Butuh bantuan atau informasi lebih lanjut? Hubungi Mindok CALM</p>
             <p><strong>drg. Erwan</strong> - 087897772642</p>
             <div class="whatsapp-button-container">
         <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-button">
             <i class="fa fa-whatsapp"></i> Kirim pesan
         </a>
-    </div>
-    <div class="button-container">
-        <button onclick="window.location.href='https://wa.me/+6287897772642'" class="cta-button">drg. Erwan - 087897772642</button>
-        <button onclick="window.location.href='https://wa.me/+6287897772642'" class="cta-button">drg. Haris - 087897772642</button>
-    </div>
+            </div>
+   <table class="button-table">
+        <tr>
+            <td>
+                <button onclick="window.location.href='#products'" class="cta-button">Lihat Produk</button>
+            </td>
+            <td>
+                <button onclick="window.location.href='#contact'" class="cta-button">Hubungi Kami</button>
+            </td>
+        </tr>
+    </table>
 </section>
 
     </div>
