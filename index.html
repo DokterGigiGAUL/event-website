@@ -10,6 +10,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            letter-spacing:-0.5px;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
@@ -23,12 +24,14 @@
             text-align: center;
         }
         header h1 {
+            letter-spacing:-0.5px;
             margin: 0;
             font-size: 2em;
             padding:0px 20px 0;
             line-height:1.3em; font-weight:800;
         }
         header p {
+            letter-spacing:-0.5px;
             font-size: 1.2em;
             margin: 10px 0;
             padding:10px 30px;
@@ -40,7 +43,7 @@
             margin: 0px auto 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             padding: 0px;
         }
@@ -49,24 +52,18 @@
             padding:0 30px;
         }
         .section h2 {
+            letter-spacing:-0.5px;
             color: #333333;
             font-size: 1.5em;
             text-align:-webkit-center;
         }
         .section p {
+            letter-spacing:-0.5px;
             font-size: 1.1em;
             line-height: 1.4; 
             margin:3px 0px;
         }
-        .cta {
-            background-color: #007acc;
-            color: white;
-            padding: 0px;
-            text-align: center;
-            margin: 0px 20px;
-            font-size: 1.2em;
-            border-radius:10px;
-        }
+
         .cta p {
             color: white;
             font-weight: bold;
@@ -113,10 +110,11 @@
             color: white;
             text-align: center;
             margin: 0px auto 0;
-            max-width:800px;
+            max-width:900px;
         }
         
         footer p{
+            letter-spacing:-0.5px;
             font-size:14px;
             line-height:1.2;
             padding:10px;
@@ -124,82 +122,104 @@
         }
         
         .cta-section {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 0px 20px 20px;
-    margin: 30px 0;
-}
+            background-color: #ffffff;
+            text-align: center;
+            padding: 0px 20px 20px;
+            margin: 30px 0;
+        }
+        
+        .cta-section h2 {
+                    letter-spacing:-0.5px;
+            font-size: 1.6em;
+            color: #333333;
+            margin-bottom: 10px;
+        }
 
-.cta-section h2 {
-    font-size: 1.6em;
-    color: #333333;
-    margin-bottom: 10px;
-}
-
-.cta-section p {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.cta-button {
-    background-color: #006600;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #005a99;
-}
+        .cta-section p {
+            letter-spacing:-0.5px;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .cta-button {
+            background-color: #006600;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #005a99;
+        }
         .whatsapp-button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-.button-table {
-    margin: 0 auto; /* Pusatkan tabel */
-}
-.button-table td {
-    padding: 10px; /* Beri jarak antar tombol */
-}        
-.whatsapp-button {
-    background-color: #009900; /* Warna hijau khas WhatsApp */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: background-color 0.3s ease;
-}
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-table {
+            margin: 0 auto; /* Pusatkan tabel */
+        }
+        .button-table td {
+            padding: 10px; /* Beri jarak antar tombol */
+        }
 
-.whatsapp-button:hover {
-    background-color: #006600; /* Warna hijau yang lebih gelap saat hover */
-}
-
-.whatsapp-button i {
-    font-size: 1.5em;
-}
+        .cta-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta {
+            background-color: #007acc;
+            color: white;
+            font-weight:800;
+            padding: 15px 60px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .whatsapp-button {
+            background-color: #009900; /* Warna hijau khas WhatsApp */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #003300; /* Warna hijau yang lebih gelap saat hover */
+        }
+        
+        .whatsapp-button i {
+            font-size: 1.4em;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div id="countdown" style="padding:10px 0;font-size:20px;font-weight:800; margin:0px auto;color:#ffffff;background:#cc1100;max-width:800px;" ></div>
-        <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54079820089_95e84fed74_h.jpg" width="800" height="444" alt="Banner Webinar" class="hero-image"></a>
-        <h1>Dental Hypnosis Webinar</h1>
-        <p>Solusi Mengurangi Kecemasan Pasien Pada Praktek Dokter Gigi Sehari-hari<br/><br/>
+        <div id="countdown" style="padding:10px 0;font-size:20px;font-weight:800; margin:0px auto;color:#ffffff;background:#cc1100;max-width:900px;" ></div>
+        <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54079820089_95e84fed74_h.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
+        <p style="font-size:12px;letter-spacing:3px;">GIGITAL x STOOTHDY WEBINAR EVENT</p>
+        <h1>Penerapan Dental Hypnosis Pada Praktek Dokter Gigi</h1>
+        <p>Solusi Untuk Mengurangi Kecemasan dan Rasa Takut Pasien<br/><br/>
         <span style="color:#ffcc00;margin-bottom:0px;"><i class="fa-solid fa-star"></i></span><strong>  5 SKP Kemenkes  </strong><span style="color:#ffcc00;"><i class="fa-solid fa-star"></i></span></p>
     </header>
     
@@ -211,43 +231,41 @@
             <p style="text-align:center;"><span style="color:#007acc;"><i class="fa-solid fa-video"></i></span>&nbsp; Online via Zoom</p>
         </section>        
         
-        <div class="cta">
-            <p><a href="https://forms.gle/DFFD7cLjobAnZLHd7">DAFTAR DISINI!</a></p>
-        </div>
+         <div class="cta-button-container">
+            <a href="https://forms.gle/DFFD7cLjobAnZLHd7" target="_blank" class="cta">KLIK DISINI UNTUK MENDAFTAR</a>
+            <p style="font-size:11px;"><b>PERINGATAN:</b> Kuota terbatas hanya untuk 1000 pendaftar pertama</p>
+         </div>
         
         <section class="section">
             <h2>Materi</h2>
-            <p style="margin-bottom:15px;text-align:center;">Dasar Hipnoterapi • Tehnik Hipnoterapi Dental • Aplikasi Dental Hipnoterapi</p>
-            <p style="text-align:center;"><span style="color:#007acc;"><i class="fa-solid fa-comments"></i></span>&nbsp; Sesi Tanya Jawab Interaktif</p>
+            <p style="text-align:center;">Dalam 240 menit kamu akan mengetahui:</p> 
+            <p style="margin-bottom:15px;text-align:center;">• Dasar Hipnoterapi • Tehnik Hipnoterapi Dental • Aplikasi Dental Hipnoterapi</p>
+            <p style="text-align:center;">Bonus:<br/><span style="color:#007acc;"><i class="fa-solid fa-comments"></i></span>&nbsp; Sesi Tanya Jawab Interaktif</p>
         </section>
 
-        <section class="section">
-            <h2>Pembicara</h2>
-            <p style="margin-bottom:10px;text-align:center;"><span style="color:#FF69B4;"><i class="fa-solid fa-user-doctor"></i></span><strong>&nbsp; drg. Suniti, Sp.PM., CHt., CI.</strong></p>
-            <p style="text-align:center;">Dokter Gigi Spesialis Penyakit Mulut dan Praktisi Dental Hipnosis</p>
-        </section>
-        
-    </div>
-    <header>
-    <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54071052060_4b86d4489a_c.jpg" alt="Banner Webinar" class="hero-image" style="margin-bottom:0px;"></a>
-    </header>
-    <div class="container">
-        
-        
         <section class="section">
             <h2>Benefit</h2>
             <p style="margin-bottom:15px;text-align:center;">E-sertifikat • Rekaman webinar untuk ditonton ulang • Diskon kelas pelatihan offline Dental Hipnotherapy</p>
         </section>
+        
+    </div>
+    <header>
+    <a href="https://desty.page/gigital" target="_blank"><img src="https://live.staticflickr.com/65535/54071052060_4b86d4489a_c.jpg" alt="Banner Webinar" class="hero-image" style="margin-bottom:0px;"></a>
+    </header>
+    <div class="container">
         
         <section class="section">
             <h2>Registrasi</h2>
             <p style="margin-bottom:10px;text-align:center;"><span style="color:#006600;"><i class="fa-solid fa-money-bill"></i></span>&nbsp;  Rp.100.000,-</p>
             <p style="text-align:center;">Transfer ke rekening <strong>BANK MANDIRI - 1660003218328</strong> an. <strong>RIFQIE AL-HARIS</strong> </p>    
         </section>
-        
-        <div class="cta">
-            <p><a href="https://forms.gle/DFFD7cLjobAnZLHd7">DAFTAR DISINI!</a></p>
+
+        <div class="cta-button-container" style="margin-bottom:30px;">
+            <a href="https://forms.gle/DFFD7cLjobAnZLHd7" target="_blank" class="cta"><span style="color:#ffffff;"><i class="fa-solid fa-user-plus"></i></span>&nbsp;DAFTAR SEKARANG</a>
+            <p style="font-size:11px;">Jangan sampai kehabisan tempat. Kuota terbatas!</p>
+
         </div>
+        
     </div>
         <section style="padding:0px 30px 30px;margin:20px 0;text-align:center;">
             <h2 style="padding-top:20px;">Kontak</h2>
@@ -255,10 +273,11 @@
             <p>drg. Erwan</strong> - <span style="color:#333333;"><i class="fab fa-whatsapp"></i></span><strong>&nbsp; 087897772642</p>
             <div class="whatsapp-button-container">
         <a href="https://wa.me/6287897772642" target="_blank" class="whatsapp-button">
-            <i class="fab fa-whatsapp"></i> Kirim pesan
+            <i class="fab fa-whatsapp"></i>&nbsp; Kirim pesan
         </a>
+            <p style="font-size:11px;">Senin - Sabtu: 08:00 - 20:00 WIB</p>
             </div>
-         <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089313821_6f17bca14c_h.jpg" width="800" height="444" alt="Banner Webinar" class="hero-image"></a>
+         <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089313821_6f17bca14c_h.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
 
         </section>
 
