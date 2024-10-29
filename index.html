@@ -28,7 +28,7 @@
             margin: 0;
             font-size: 2em;
             padding:0px 20px 0;
-            line-height:1.3em; font-weight:800;
+            line-height:1.2em; font-weight:900;
         }
         header p {
             letter-spacing:-0.5px;
@@ -42,14 +42,20 @@
             object-fit: cover;
             margin: 0px auto 5px;
         }
+        .hero-image2 {
+            max-width: 100%;
+            height: 50vw;
+            object-fit: cover;
+            margin: 0px auto 5px;
+        }
         .container {
             max-width: 900px;
             margin: auto;
             padding: 0px;
         }
         .section {
-            margin: 30px 0;
-            padding:0 30px;
+            margin: 10px 0px 0px;
+            padding: 15px 30px;
         }
         .section h2 {
             letter-spacing:-0.5px;
@@ -63,7 +69,24 @@
             line-height: 1.4; 
             margin:3px 0px;
         }
-
+        .sectionn {
+            margin: 10px 0px 0px;
+            padding:30px;
+            background:#333333;
+        }
+        .sectionn h2 {
+            letter-spacing:-0.5px;
+            color: #ffffff;
+            font-size: 1.5em;
+            text-align:-webkit-center;
+        }
+        .sectionn p {
+            letter-spacing:-0.5px;
+            font-size: 1.1em;
+            line-height: 1.4; 
+            margin:3px 0px;
+            color:#ffffff;
+        }
         .cta p {
             color: white;
             font-weight: bold;
@@ -175,7 +198,7 @@
 
         .cta-button-container {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .cta {
             background-color: #007acc;
@@ -211,73 +234,163 @@
         .whatsapp-button i {
             font-size: 1.4em;
         }
+
+         /* Styling for the testimonials section */
+        .testimonials-section {
+            padding: 30px 0 30px 30px;
+            margin-top:10px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        
+        .testimonials-section h2 {
+            color:#333333;
+            margin-top:0px;
+        }
+        .carousel-container {
+            width: 100%;
+            overflow: hidden; /* Hide overflow content */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-card {
+            flex: 0 0 85%; /* 85% width for the visible card */
+            margin-right: 20px; /* Space for the next card to peek */
+            box-sizing: border-box;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 15px;
+            border:1px solid #ccc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-card h4 {
+            font-size: 1rem;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div id="countdown" style="padding:10px 0;font-size:20px;font-weight:800; margin:0px auto;color:#ffffff;background:#cc1100;max-width:900px;" ></div>
-                <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54099955806_d02b393f45.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
+        <div id="countdown" style="padding:10px 0;font-size:20px;font-weight:800; margin:0px auto;color:#ffffff;background:#cc1100;max-width:900px;" >
+        </div>
+                <a href="https://gigital.site" target="_blank">
+                    <img src="https://live.staticflickr.com/65535/54099955806_d02b393f45.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image2">
+                </a>
         <p style="font-size:12px;letter-spacing:2px;">GIGITAL x STOOTHDY WEBINAR EVENT</p>
         <h1>Optimalkan Praktekmu dengan Hipnosis Dental</h1>
-        <p style="line-height:1.1em;font-size: 1.1em;">Solusi mengurangi ketakutan dan kecemasan pasien untuk meningkatkan kenyamanan sebelum, selama dan setelah perawatan<br/><br/>
-        <span style="color:#ffcc00;margin-bottom:0px;"><i class="fa-solid fa-star"></i></span><strong>&nbsp; 5 SKP Kemenkes &nbsp;</strong><span style="color:#ffcc00;"><i class="fa-solid fa-star"></i></span></p>
+        <p style="line-height:1.4em;font-size: 1.1em;padding-bottom:0px;">Solusi mengurangi ketakutan dan kecemasan pasien untuk meningkatkan kenyamanan sebelum, selama dan setelah perawatan<br/><br/>
+        <span style="color:#ffcc00;"><i class="fa-solid fa-star"></i></span><strong>&nbsp; 5 SKP Kemenkes &nbsp;</strong><span style="color:#ffcc00;"><i class="fa-solid fa-star"></i></span></p>
+        <p style="margin-bottom:10px; text-align:center;padding:0px 0 10px 0;line-height:1.1em;letter-spacing:-0.5px;font-size: 1.1em;"><span style="color:#007acc;"><i class="fa-solid fa-video"></i></span>&nbsp; Online via Zoom</p>
             <p style="text-align:center;padding:0px;line-height:1.1em;letter-spacing:-0.5px;font-size: 1.1em;"><span style="color:#333333;"><i class="fa-regular fa-calendar"></i></span>&nbsp; Sabtu, 16 November 2024</p>
-            <p style="margin-bottom:10px;text-align:center;padding:0px;line-height:1.1em;letter-spacing:-0.5px;font-size: 1.1em;"><span style="color:#333333;"><i class="fa-regular fa-clock"></i></span>&nbsp; 09.00 - 14.00 WIB</p>
-            <p style="text-align:center;padding:10px 0 0 0;line-height:1.1em;letter-spacing:-0.5px;font-size: 1.1em;"><span style="color:#007acc;"><i class="fa-solid fa-video"></i></span>&nbsp; Online via Zoom</p>      
-        
+            <p style="text-align:center;padding:0 0 20px 0;line-height:1.1em;letter-spacing:-0.5px;font-size: 1.1em;"><span style="color:#333333;"><i class="fa-regular fa-clock"></i></span>&nbsp; 09.00 - 14.00 WIB</p>
+            
          <div class="cta-button-container">
             <a href="https://forms.gle/DFFD7cLjobAnZLHd7" target="_blank" class="cta"><span style="color:#ffffff;"><i class="fa-solid fa-user-plus"></i></span>&nbsp;DAFTAR SEKARANG</a>
-            <p style="font-size:11px;padding-top:5px;"><b>PERINGATAN:</b> Kuota terbatas. Hanya untuk 500 pendaftar pertama</p>
+            <p style="font-size:11px;padding-top:5px;margin-top:0px;"><b>PERINGATAN:</b> Kuota terbatas. Hanya untuk 1000 peserta!</p>
          </div>        
     </header>
     
     <div class="container">
         
         <section class="section">
-            <h2>Materi</h2>
+            <h2 style="margin-top:0px;">Materi</h2>
             <p style="text-align:center;">Dalam 240 menit kamu akan mengetahui:</p> 
             <p style="margin-bottom:15px;text-align:center;">• Dasar Hipnoterapi • Tehnik Hipnoterapi Dental Sederhana dan Efektif • Aplikasi Dental Hipnoterapi • Tips Praktis Berdasarkan Pengalaman Ahli</p>
             <p style="text-align:center;">Bonus:<br/><span style="color:#007acc;"><i class="fa-solid fa-comments"></i></span>&nbsp; Sesi Tanya Jawab Interaktif</p>
         </section>
 
         <section class="section">
-            <h2>Benefit</h2>
-            <p style="margin-bottom:15px;text-align:center;">E-sertifikat • Rekaman webinar untuk ditonton ulang • Diskon kelas pelatihan offline Dental Hipnotherapy</p>
+            <h2 style="margin-top:0px;">Benefit</h2>
+            <p style="margin-bottom:15px;text-align:center;">• SKP Kemenkes • E-sertifikat • Rekaman webinar untuk ditonton ulang • Diskon kelas pelatihan offline Dental Hipnotherapy</p>
         </section>
-        
-    </div>
-    <header>
-    <a href="https://desty.page/gigital" target="_blank"><img src="https://live.staticflickr.com/65535/54071052060_4b86d4489a_c.jpg" alt="Banner Webinar" class="hero-image" style="margin-bottom:0px;"></a>
-    </header>
-    <div class="container">
-        
+
         <section class="section">
-            <h2>Registrasi</h2>
+            <h2 style="margin-top:0px;">Registrasi</h2>
             <p style="margin-bottom:10px;text-align:center;"><span style="color:#006600;"><i class="fa-solid fa-money-bill"></i></span>&nbsp;  Rp.100.000,-</p>
             <p style="text-align:center;">Transfer ke rekening <strong>BANK MANDIRI - 1660003218328</strong> an. <strong>RIFQIE AL-HARIS</strong> </p>    
         </section>
 
-        <div class="cta-button-container" style="margin-bottom:30px;">
+    </div>
+        <div class="cta-button-container" style="margin-bottom:0px;">
             <a href="https://forms.gle/DFFD7cLjobAnZLHd7" target="_blank" class="cta"><span style="color:#ffffff;"><i class="fa-solid fa-user-plus"></i></span>&nbsp;DAFTAR SEKARANG</a>
-            <p style="font-size:11px;">Jangan sampai kehabisan tempat. Kuota terbatas!</p>
-
+            <p style="font-size:11px;padding-top:5px;margin-top:0px;">Jangan sampai kehabisan tempat. Kuota terbatas!</p>
         </div>
+    
+    <div class="container">
+        
+        <section id="testimonials" class="testimonials-section">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-card">
+                    <p>"Topik webinarnya keren-keren! Gak sabar buat nunggu topik webinar Gigital selanjutnya"</p>
+                    <h4><strong>Wawan - Kab. Soreang</h4></strong>
+                </div>
+                <div class="carousel-card">
+                    <p>"Pembicaranya luar biasa dan sangat informatif. Highly recommended!"</p>
+                    <h4><strong>Ni Komang - Bali</h4></strong>
+                </div>
+                <div class="carousel-card">
+                    <p>"Sangat terorganisir dan membuka peluang jejaring baru.Suka banget!"</p>
+                    <h4><strong>Eduardo - Timor Leste</h4></strong>
+                </div>
+                  <div class="carousel-card">
+                    <p>"Topik webinarnya keren-keren! Gak sabar buat nunggu topik webinar Gigital selanjutnya"</p>
+                    <h4><strong>Wawan - Kab. Soreang</h4></strong>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="section">
+        <h2 style="margin-top:0px;">Previous Events Partners</h2>
+                <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089313821_6f17bca14c_h.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
+    </section>
         
     </div>
-        <section style="padding:0px 30px 30px;margin:20px 0;text-align:center;">
-            <h2 style="padding-top:20px;">Kontak</h2>
+        <section style="padding:0px 30px 30px;margin:0px 0;text-align:center;">
+            <h2 style="padding-top:0px;">Kontak</h2>
             <p>Butuh bantuan atau informasi lebih lanjut? Hubungi Mindok CALM</p>
             <p>drg. Erwan</strong> - <span style="color:#333333;"><i class="fab fa-whatsapp"></i></span><strong>&nbsp; 087897772642</p>
             <div class="whatsapp-button-container">
         <a href="https://wa.me/6287897772642" target="_blank" class="whatsapp-button">
             <i class="fab fa-whatsapp"></i>&nbsp; Kirim pesan
         </a>
-            <p style="font-size:11px;">Senin - Sabtu: 08:00 - 20:00 WIB</p>
+            <p style="font-size:11px;margin-top:5px;margin-bottom:30px;font-weight:400;">Senin - Sabtu: 08:00 - 20:00 WIB</p>
             </div>
-         <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089313821_6f17bca14c_h.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
-
+           <!--  <header>
+                <a href="https://desty.page/gigital" target="_blank"><img src="https://live.staticflickr.com/65535/54071052060_4b86d4489a_c.jpg" alt="Banner Webinar" class="hero-image" style="margin-bottom:0px;height:auto!important;"></a>
+                
+            </header> -->
         </section>
 
+
+    <script>
+        let currentIndex = 0;
+
+        function showNextCard() {
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.carousel-card');
+            currentIndex = (currentIndex + 1) % cards.length;
+
+            const offset = -(currentIndex * (cards[0].offsetWidth + 15)); // Offset calculation with margin
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        setInterval(showNextCard, 2000); // Change every 2 seconds
+    </script>
+    
 <script>
   // Set the date we're counting down to
   var countDownDate = new Date("Nov 15, 2024 00:00:00").getTime();
@@ -298,7 +411,7 @@
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result
-    document.getElementById("countdown").innerHTML = days + " hari " + hours + " jam "
+    document.getElementById("countdown").innerHTML = days + " hari  " + hours + " jam  "
     + minutes + " menit ";
 
     // If the countdown is over, display a message
