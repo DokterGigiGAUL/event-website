@@ -126,6 +126,47 @@
             }
         });
     </script>
+    <script>
+    const form = document.getElementById('webinarForm');
+    const successMessage = document.getElementById('successMessage');
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        try {
+            console.log('Mengirim data:', data); // Debug log
+            
+            const response = await fetch('https://script.google.com/macros/s/AKfycbxElc_hFohLJYlL1fbNcbiuOCtXPZvoGqE0RfsEFVraJP95ZXBHqzDY3t82bAQ1k5bP/exec', {
+                method: 'POST',
+                mode: 'cors', // Tambahkan ini
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            console.log('Response status:', response.status); // Debug log
+            const responseData = await response.json();
+            console.log('Response data:', responseData); // Debug log
+            
+            if (response.ok) {
+                form.reset();
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            } else {
+                throw new Error(`Error: ${responseData.message}`);
+            }
+        } catch (error) {
+            console.error('Detailed error:', error); // Debug log
+            alert('Maaf, terjadi kesalahan. Silakan cek console untuk detail.');
+        }
+    });
+</script>
 </body>
 </html>
 
