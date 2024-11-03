@@ -173,7 +173,10 @@
 
       fetch('https://script.google.com/macros/s/AKfycbzdk-6syKxBWLwFZ3GwjxPmPqmzOly9dGLozBFehWuBPUUDbzfFQxsow9ya9KJkmoTW/exec', {
         method: 'POST',
-        body: formData
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
       })
       .then(response => response.json())
       .then(data => {
