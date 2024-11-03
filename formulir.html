@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Formulir Registrasi Webinar - Gigital">
+    <meta property="og:description" content="Pendaftaran peserta webinar/seminar Gigital">
+    <meta property="og:image" content="https://live.staticflickr.com/65535/54112277082_23c28bd21d_n.jpg">
+    <meta property="og:url" content="https://doktergigigaul.github.io/event-website/formulir">
+    <meta property="og:type" content="website">
+  <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Registrasi Simposium Dental LASER - GLOW 2024</title>
+  <style>
+    /* Import Google Fonts for SF Pro and Inter */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', Helvetica,  sans-serif;
+    }
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 0px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    .form-container h1 {
+      text-align: center;
+      color: #333333;
+      font-weight: 800;
+      margin-bottom:30px;
+      padding:0 20px!important;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      padding:0 20px!important;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 400;
+      font-size:1.1em;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="file"],
+    .form-group .status-options {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: 400;
+    }
+    .status-options label {
+      display: block;
+      margin-bottom: 5px;
+      font-size:1em;
+      font-weight:400;
+    }
+    .btn-submit {
+      background-color: #009191;
+      color: white;
+      padding: 15px;
+      border: none;
+      width: 100%;
+      font-size: 1.1em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-submit:hover {
+      background-color: #006161;
+    }
+    .form-group .file-upload {
+      padding: 5px;
+      background-color: #f9f9f9;
+      border: 1px dashed #cccccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .placeholder-img {
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container1">
+    <a href="https://doktergigigaul.github.io" target="_blank">
+    <img src="https://live.staticflickr.com/65535/54112277082_23c28bd21d_n.jpg" width="900" height="444" alt="Banner Webinar" class="placeholder-img">
+    </a>
+    <h1>Registrasi Webinar Gigital - CALM 2024</h1>
+    
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="email">Email: <i>(sesuai akses akun Pelataran Sehat)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="nama">Nama Lengkap: <i>(tanpa gelar akademik)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="text" id="nama" name="nama" required>
+      </div>
+      <div class="form-group">
+        <label for="nik">Nomor Induk Kependudukan (NIK):<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="text" id="nik" name="nik" required>
+      </div>
+      <div class="form-group">
+        <label for="whatsapp">Nomor WhatsApp:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="text" id="whatsapp" name="whatsapp" required>
+      </div>
+      <div class="form-group">
+        <label>Status:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <div class="status-options">
+          <label><input type="radio" name="status" value="Dokter Gigi Umum" required> Dokter Gigi Umum</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Penyakit Mulut" required> Dokter Gigi Spesialis Penyakit Mulut</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Periodonsia" required> Dokter Gigi Spesialis Periodonsia</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Ortodonsia" required> Dokter Gigi Spesialis Ortodonsia</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Prostodonsia" required> Dokter Gigi Spesialis Prostodonsia</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Konservasi Gigi" required> Dokter Gigi Spesialis Konservasi Gigi</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Bedah Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Bedah Mulut Maksilofasial</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Kedokteran Gigi Anak" required> Dokter Gigi Spesialis Kedokteran Gigi Anak </label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Radiologi Kedokteran Gigi" required> Dokter Gigi Spesialis Radiologi Kedokteran Gigi</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Patologi Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Patologi Mulut Maksilofasial</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Odontologi Forensik" required> Dokter Gigi Spesialis Odontologi Forensik</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="bukti">Upload Bukti Pembayaran: <i>(jpg/png, max 10MB)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="file" id="bukti" name="bukti" class="file-upload" required>
+      </div>
+      <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
+      <button type="submit" class="btn-submit">Kirim</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Simpan data dan arahkan ke halaman konfirmasi
+      const email = document.getElementById('email').value;
+      const nama = document.getElementById('nama').value;
+      const nik = document.getElementById('nik').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const status = document.querySelector('input[name="status"]:checked').value;
+      const bukti = document.getElementById('bukti').files[0];
+
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('nama', nama);
+      formData.append('nik', nik);
+      formData.append('whatsapp', whatsapp);
+      formData.append('status', status);
+      formData.append('bukti', bukti);
+
+      fetch('https://script.google.com/macros/s/AKfycbzdk-6syKxBWLwFZ3GwjxPmPqmzOly9dGLozBFehWuBPUUDbzfFQxsow9ya9KJkmoTW/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Redirect ke halaman konfirmasi
+        window.location.href = '/event-website/confirmation.html';
+      })
+      .catch(error => {
+        alert('Terjadi kesalahan, coba lagi nanti.');
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
