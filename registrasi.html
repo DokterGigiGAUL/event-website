@@ -207,6 +207,45 @@
       formData.append('Status', Status);
       formData.append('Bukti', Bukti);
 
+      function cekFileDanUpload() {
+    const fileInput = document.getElementById("Bukti");
+    const filePath = fileInput.value;
+    const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+
+    if (!filePath) {
+      alert("Please select a file.");
+      return;
+    } else if (!allowedExtensions.exec(filePath)) {
+      alert("Invalid file type. Please upload a JPEG, PNG, or PDF file.");
+      fileInput.value = ''; // Reset file input
+      return;
+    }
+    
+    uploadFile();
+  }
+  
+  function uploadFile() {
+    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("registrationForm"));
+  } 
+  function sukses() {
+    alert("File successfully uploaded.");
+  }
+  function gagal() {
+    alert("Failed to upload file. Please try again.");
+  }
+      
+      function upload(e) {
+  var destination_id = "1nCbSKSQ9y0zex2q_JEq_d_ACYXsM5l82"; // Folder ID Google Drive
+  var fileBlob = e.imageFile; // Mengambil file yang diunggah dari form
+  
+  // Mendeteksi contentType secara otomatis berdasarkan tipe file yang diunggah
+  var contentType = fileBlob.getContentType();
+  var destination = DriveApp.getFolderById(destination_id);
+
+  // Menyimpan file di folder tujuan dengan nama asli dari file
+  destination.createFile(fileBlob.setName(fileBlob.getName()));
+}
+      
       fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
         method: 'POST',
         body: formData
