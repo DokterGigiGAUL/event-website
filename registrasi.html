@@ -175,7 +175,14 @@
   reader.onload = function() {
     const base64File = reader.result;
 
-        const formData = {
+      const formData = new FormData();
+      formData.append('Nama', Nama);
+      formData.append('Email', Email);
+      formData.append('NIK', NIK);
+      formData.append('WhatsApp', WhatsApp);
+      formData.append('Status', Status);
+    
+    const formData = {
       Nama: Nama,
       Email: Email,
       NIK: NIK,
@@ -187,9 +194,9 @@
     };
 
     // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbzVgM5AC5pUODtVZniMU8C4MV4XTQoEzxl8t2vWVJ_GJGYwze9sN9UZMdqcqa5TC6ly7A/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxU_IgL7ogTs4S1AuPLRrPmIZiEn86YsWdtiFcoP1UF7nnVcfnmDMluEKrOcPj286xE/exec', {
       method: 'POST',
-    
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
     .then(response => response.json())
