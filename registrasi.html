@@ -157,95 +157,60 @@
     <form id="registrationForm">
     
   </div>
-<!-- Tambahkan di bagian bawah <body> atau di bagian <head> dari registrasi.html -->
-<script>
-  function doGet() {
-  var url = "https://doktergigigaul.github.io/event-website/registrasi.html";
-  
-  // Fetch the HTML content from the external URL
-  var response = UrlFetchApp.fetch(url);
-  var htmlContent = response.getContentText();
-  
-  // Return the fetched content as HTML output
-  return HtmlService.createHtmlOutput(htmlContent)
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
-    .setTitle('Form Registrasi');
-}
-</script>
 
   <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+  event.preventDefault();
 
-      // Simpan data dan arahkan ke halaman konfirmasi
-      const Nama = document.getElementById('Nama').value;
-      const Email = document.getElementById('Email').value;
-      const NIK = document.getElementById('NIK').value;
-      const WhatsApp = document.getElementById('WhatsApp').value;
-      const Status = document.querySelector('input[name="Status"]:checked').value;
-      const Bukti = document.getElementById('Bukti').files[0];
+  // Ambil data dari form
+  const Nama = document.getElementById('Nama').value;
+  const Email = document.getElementById('Email').value;
+  const NIK = document.getElementById('NIK').value;
+  const WhatsApp = document.getElementById('WhatsApp').value;
+  const Status = document.querySelector('input[name="Status"]:checked').value;
+  const BuktiFile = document.getElementById('Bukti').files[0];
 
-      const formData = new FormData();
-      formData.append('Nama', Nama);
-      formData.append('Email', Email);
-      formData.append('NIK', NIK);
-      formData.append('WhatsApp', WhatsApp);
-      formData.append('Status', Status);
-      formData.append('Bukti', Bukti);
+  // Fungsi untuk mengonversi file ke base64
+  const reader = new FileReader();
+  reader.onload = function() {
+    const base64File = reader.result;
 
-      function cekFileDanUpload() {
-    const fileInput = document.getElementById("Bukti");
-    const filePath = fileInput.value;
-    const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+    const formData = {
+      Nama: Nama,
+      Email: Email,
+      NIK: NIK,
+      WhatsApp: WhatsApp,
+      Status: Status,
+      Bukti: base64File,
+      fileName: BuktiFile.name,
+      fileType: BuktiFile.type
+    };
 
-    if (!filePath) {
-      alert("Please select a file.");
-      return;
-    } else if (!allowedExtensions.exec(filePath)) {
-      alert("Invalid file type. Please upload a JPEG, PNG, or PDF file.");
-      fileInput.value = ''; // Reset file input
-      return;
-    }
-    
-    uploadFile();
-  }
-  
-  function uploadFile() {
-    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("registrasi"));
-  } 
-  function sukses() {
-    alert("File successfully uploaded.");
-  }
-  function gagal() {
-    alert("Failed to upload file. Please try again.");
-  }
-      
-      function upload(e) {
-  var destination_id = "1nCbSKSQ9y0zex2q_JEq_d_ACYXsM5l82"; // Folder ID Google Drive
-  var fileBlob = e.imageFile; // Mengambil file yang diunggah dari form
-  
-  // Mendeteksi contentType secara otomatis berdasarkan tipe file yang diunggah
-  var contentType = fileBlob.getContentType();
-  var destination = DriveApp.getFolderById(destination_id);
-
-  // Menyimpan file di folder tujuan dengan nama asli dari file
-  destination.createFile(fileBlob.setName(fileBlob.getName()));
-}
-      
-      fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
+    // Kirim data ke Google Apps Script
+    fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
         // Redirect ke halaman konfirmasi
         window.location.href = 'confirmation.html';
-      })
-      .catch(error => {
-        alert('Terjadi kesalahan, coba lagi nanti.');
-        console.error('Error:', error);
-      });
+      } else {
+        alert('Terjadi kesalahan: ' + data.message);
+      }
+    })
+    .catch(error => {
+      alert('Terjadi kesalahan, coba lagi nanti.');
+      console.error('Error:', error);
     });
+  };
+
+  reader.readAsDataURL(BuktiFile);
+});
+
   </script>
 </body>
 </html>
+      fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
