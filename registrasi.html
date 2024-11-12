@@ -106,7 +106,7 @@
     </a>
     <h1 style="padding:0 20px!important;">Registrasi Event<br/>Gigital x Stoothdy</h1>
     <p style="text-align:center;padding:0 20px 45px 20px;color:#666666;font-size:15px;font-weight:300;">Bagi peserta dokter gigi/ dokter gigi spesialis/ dokter/ dokter spesialis <b>wajib</b> memiliki akun Satu Sehat yang telah terverifikasi</p>
-      <form id="registrationForm">
+      <form id="registrationForm" enctype="multipart/form-data">
         <div class="form-group">
         <label for="Nama">Nama Lengkap:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/>
          <span style="color:#888888;font-size:14px;font-weight:400;margin-bottom:10px;">Tanpa gelar akademik</span></label>
@@ -149,7 +149,7 @@
           <p style="color:#888888;font-size:14px;font-weight:400;line-height:1.3em!important;margin-top:5px;padding-bottom:0px;">
             Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK BCA - 0342103829 an. AGAM FERRY ERWANA (file format jpg/png, max 10MB) </p>
 <!--            Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS (file format jpg/png, max 10MB) </p>-->
-        <input type="file" id="Bukti" name="Bukti" accept="image/jpeg" class="file-upload"  required>
+        <input type="file" id="Bukti" name="Bukti" accept="image/jpeg" accept="image/png" accept="file/pdf" class="file-upload" required>
       </div>
       <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
       <button type="submit" class="btn-submit">Kirim</button>
@@ -175,12 +175,12 @@
   reader.onload = function() {
     const base64File = reader.result;
 
-    const formData = {
-      Nama: Nama,
-      Email: Email,
-      NIK: NIK,
-      WhatsApp: WhatsApp,
-      Status: Status,
+    const formData = new FormData();
+      formData.append('Nama', Nama);
+      formData.append('Email', Email);
+      formData.append('NIK', NIK);
+      formData.append('WhatsApp', WhatsApp);
+      formData.append('Status', Status);
       Bukti: base64File,
       fileName: BuktiFile.name,
       fileType: BuktiFile.type
@@ -189,7 +189,6 @@
     // Kirim data ke Google Apps Script
     fetch('https://script.google.com/macros/s/AKfycbxU_IgL7ogTs4S1AuPLRrPmIZiEn86YsWdtiFcoP1UF7nnVcfnmDMluEKrOcPj286xE/exec', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
     .then(response => response.json())
