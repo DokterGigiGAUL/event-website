@@ -175,13 +175,6 @@
   reader.onload = function() {
     const base64File = reader.result;
 
-      const formData = new FormData();
-      formData.append('Nama', Nama);
-      formData.append('Email', Email);
-      formData.append('NIK', NIK);
-      formData.append('WhatsApp', WhatsApp);
-      formData.append('Status', Status);
-    
     const formData = {
       Nama: Nama,
       Email: Email,
