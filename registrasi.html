@@ -211,7 +211,7 @@
   }
   
   function uploadFile() {
-    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("registrationForm"));
+    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("registrasi"));
   } 
   function sukses() {
     alert("File successfully uploaded.");
