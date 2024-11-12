@@ -177,7 +177,7 @@
   }
   
   function uploadFile() {
-    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("Bukti"));
+    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("registrationForm"));
   } 
   function sukses() {
     alert("File successfully uploaded.");
