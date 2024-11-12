@@ -159,32 +159,18 @@
   </div>
 <!-- Tambahkan di bagian bawah <body> atau di bagian <head> dari registrasi.html -->
 <script>
-  function cekFileDanUpload() {
-    const fileInput = document.getElementById("Bukti");
-    const filePath = fileInput.value;
-    const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
-
-    if (!filePath) {
-      alert("Please select a file.");
-      return;
-    } else if (!allowedExtensions.exec(filePath)) {
-      alert("Invalid file type. Please upload a JPEG, PNG, or PDF file.");
-      fileInput.value = ''; // Reset file input
-      return;
-    }
-    
-    uploadFile();
-  }
+  function doGet() {
+  var url = "https://doktergigigaul.github.io/event-website/registrasi.html";
   
-  function uploadFile() {
-    google.script.run.withSuccessHandler(sukses).withFailureHandler(gagal).upload(document.getElementById("registrationForm"));
-  } 
-  function sukses() {
-    alert("File successfully uploaded.");
-  }
-  function gagal() {
-    alert("Failed to upload file. Please try again.");
-  }
+  // Fetch the HTML content from the external URL
+  var response = UrlFetchApp.fetch(url);
+  var htmlContent = response.getContentText();
+  
+  // Return the fetched content as HTML output
+  return HtmlService.createHtmlOutput(htmlContent)
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
+    .setTitle('Form Registrasi');
+}
 </script>
 
   <script>
