@@ -179,6 +179,17 @@
       formData.append('Status', Status);
       formData.append('Bukti', Bukti);
 
+        // Fungsi untuk mengonversi file ke base64
+      const reader = new FileReader();
+      reader.onload = function() {
+      const base64File = reader.result;
+
+      const formData = FormData();
+      Bukti: base64File,
+      fileName: BuktiFile.name,
+      fileType: BuktiFile.type
+    };
+      
       fetch('https://script.google.com/macros/s/AKfycbxU_IgL7ogTs4S1AuPLRrPmIZiEn86YsWdtiFcoP1UF7nnVcfnmDMluEKrOcPj286xE/exec', {
         method: 'POST',
         body: formData
