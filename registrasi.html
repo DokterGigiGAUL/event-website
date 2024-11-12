@@ -169,21 +169,18 @@
   const WhatsApp = document.getElementById('WhatsApp').value;
   const Status = document.querySelector('input[name="Status"]:checked').value;
   const BuktiFile = document.getElementById('Bukti').files[0];
-
-  const formData = new FormData();
-      formData.append('Nama', Nama);
-      formData.append('Email', Email);
-      formData.append('NIK', NIK);
-      formData.append('WhatsApp', WhatsApp);
-      formData.append('Status', Status);
-      formData.append('Bukti', Bukti);
       
   // Fungsi untuk mengonversi file ke base64
   const reader = new FileReader();
   reader.onload = function() {
     const base64File = reader.result;
 
-    const formData = {
+        const formData = {
+      Nama: Nama,
+      Email: Email,
+      NIK: NIK,
+      WhatsApp: WhatsApp,
+      Status: Status,
       Bukti: base64File,
       fileName: BuktiFile.name,
       fileType: BuktiFile.type
