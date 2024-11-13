@@ -183,19 +183,23 @@
 
     // Kirim data ke Google Apps Script
     fetch('https://script.google.com/macros/s/AKfycbzUuIUgwAWhNMsrmsMPty44eauykVViMO-jhpVUU7HPzCfzXHBsgmddyjto3uHcFxVaVg/exec', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      window.location.href = 'confirmation.html'; // Halaman konfirmasi
-    })
-    .catch(error => {
-      alert('Terjadi kesalahan, coba lagi nanti.');
-      console.error('Error:', error);
-    });
-  };
-
+     method: 'POST',
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  if (data.status === 'success') {
+    window.location.href = 'confirmation.html';
+  } else {
+    alert('Terjadi kesalahan dalam pengiriman data. Coba lagi nanti.');
+    console.error('Error:', data.error);
+  }
+})
+.catch(error => {
+  alert('Terjadi kesalahan jaringan atau server. Coba lagi nanti.');
+  console.error('Error:', error);
+});
+    
   if (Bukti) {
     reader.readAsDataURL(Bukti);
   } else {
