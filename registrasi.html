@@ -182,9 +182,9 @@
     formData.append('BuktiType', Bukti.type);
 
     // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbwnCIfslXP0APqbkb1aAYhnnah7_9Obm0o7l0fTV4DphpWZkTtXoBVKI8q-k4_RdddXOQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwFWBuJtmj25tl9-Inm0Yk8NTXQx8uSiKvtX_YnERpchkPOTryxmXMnpiZXiV-ZpQrBDA/exec', {
      method: 'POST',
-  body: formData
+      body: formData
 })
 .then(response => response.json())
     .then(data => {
