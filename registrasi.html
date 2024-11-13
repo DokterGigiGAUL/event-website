@@ -156,7 +156,7 @@
     </form>    
   </div>
 
- <!-- <script>
+  <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
@@ -190,18 +190,7 @@
         console.error('Error:', error);
       });
     });
-  </script>-->
-  <script>
-        function submitForm() {
-            var formData = new FormData(document.getElementById('registrationForm'));
-            fetch('https://script.google.com/macros/s/AKfycbzk1Wv4fQ7Wal2ubsRH3dsx2OsUs7XaaS-ezcL9XjoLqoUegX_-Md-mUKvcH9ToaSLw5Q/exec', { // Ganti dengan URL dari Google Apps Script
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => alert('Registrasi berhasil!'))
-            .catch(error => alert('Registrasi gagal: ' + error.message));
-        }
-    </script>
+  </script>
+
 </body>
 </html>
