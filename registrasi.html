@@ -152,57 +152,44 @@
         <input type="file" id="Bukti" name="Bukti" class="file-upload" accept="image/*" required>
       </div>
       <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
-      <button type="submit" class="btn-submit" onclick="submitForm()">Kirim</button>
+      <button type="submit" class="btn-submit">Kirim</button>
     </form>    
   </div>
 
   <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+      event.preventDefault();
 
-  // Simpan data formulir
-  const Nama = document.getElementById('Nama').value;
-  const Email = document.getElementById('Email').value;
-  const NIK = document.getElementById('NIK').value;
-  const WhatsApp = document.getElementById('WhatsApp').value;
-  const Status = document.querySelector('input[name="Status"]:checked').value;
-  const Bukti = document.getElementById('Bukti').files[0];
+      // Simpan data dan arahkan ke halaman konfirmasi
+      const Nama = document.getElementById('Nama').value;
+      const Email = document.getElementById('Email').value;
+      const NIK = document.getElementById('NIK').value;
+      const WhatsApp = document.getElementById('WhatsApp').value;
+      const Status = document.querySelector('input[name="Status"]:checked').value;
+      const Bukti = document.getElementById('Bukti').files[0];
 
-  const formData = new FormData();
-  formData.append('Nama', Nama);
-  formData.append('Email', Email);
-  formData.append('NIK', NIK);
-  formData.append('WhatsApp', WhatsApp);
-  formData.append('Status', Status);
+      const formData = new FormData();
+      formData.append('Nama', Nama);
+      formData.append('Email', Email);
+      formData.append('NIK', NIK);
+      formData.append('WhatsApp', WhatsApp);
+      formData.append('Status', Status);
+      formData.append('Bukti', Bukti);
 
-  const reader = new FileReader();
-  reader.onloadend = function() {
-    formData.append('Bukti', reader.result.split(',')[1]); // Menghapus prefix base64
-    formData.append('BuktiName', Bukti.name);
-    formData.append('BuktiType', Bukti.type);
-
-    // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycby_Bb-4U92Qg-LgyanW4PtWHQQbNmBHBme4eBaky_5d2izxQSgCdYxkpOSA8C4m2I3r0A/exec', {
-     method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      window.location.href = 'confirmation.html'; // Halaman konfirmasi
-    })
-    .catch(error => {
-      alert('Terjadi kesalahan, coba lagi nanti.');
-      console.error('Error:', error);
+      fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Redirect ke halaman konfirmasi
+        window.location.href = 'confirmation.html';
+      })
+      .catch(error => {
+        alert('Terjadi kesalahan, coba lagi nanti.');
+        console.error('Error:', error);
+      });
     });
-  };
-
-  if (Bukti) {
-    reader.readAsDataURL(Bukti);
-  } else {
-    alert('Harap unggah bukti pembayaran.');
-  }
-});
   </script>
-
 </body>
 </html>
