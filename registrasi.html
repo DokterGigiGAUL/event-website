@@ -176,20 +176,24 @@
       formData.append('Status', Status);
       formData.append('Bukti', Bukti);
 
-      fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbykZfqSQWIy9t2fRcBnNVbS5KVx1mbfKZ8neSwM43vYy5bV3jVQKE0qYkdRSXPuSPXsmA/exec', {
         method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Redirect ke halaman konfirmasi
-        window.location.href = 'confirmation.html';
-      })
-      .catch(error => {
-        alert('Terjadi kesalahan, coba lagi nanti.');
-        console.error('Error:', error);
-      });
-    });
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  if (data.status === 'success') {
+    window.location.href = 'confirmation.html';
+  } else {
+    alert('Terjadi kesalahan dalam pengiriman data. Coba lagi nanti.');
+    console.error('Error:', data.error);
+  }
+})
+.catch(error => {
+  alert('Terjadi kesalahan jaringan atau server. Coba lagi nanti.');
+  console.error('Error:', error);
+});
+
   </script>
 </body>
 </html>
