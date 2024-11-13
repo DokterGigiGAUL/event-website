@@ -187,19 +187,14 @@
   body: formData
 })
 .then(response => response.json())
-.then(data => {
-  if (data.status === 'success') {
-    window.location.href = 'confirmation.html';
-  } else {
-    alert('Terjadi kesalahan dalam pengiriman data. Coba lagi nanti.');
-    console.error('Error:', data.error);
-  }
-})
-.catch(error => {
-  alert('Terjadi kesalahan jaringan atau server. Coba lagi nanti.');
-  console.error('Error:', error);
-});
-    
+    .then(data => {
+      window.location.href = 'confirmation.html'; // Halaman konfirmasi
+    })
+    .catch(error => {
+      alert('Terjadi kesalahan, coba lagi nanti.');
+      console.error('Error:', error);
+    });
+  };
   if (Bukti) {
     reader.readAsDataURL(Bukti);
   } else {
