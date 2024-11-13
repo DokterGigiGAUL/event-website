@@ -100,7 +100,7 @@
   </style>
 </head>
 <body>
-    <div class="form-container" enctype="multipart/form-data" method="POST">
+    <div class="form-container" enctype="multipart/form-data">
     <a href="https://doktergigigaul.github.io" target="_blank">
     <img src="https://live.staticflickr.com/65535/54122193676_05d5bf043c_k.jpg" width="900" height="444" alt="Banner Webinar" class="placeholder-img">
     </a>
@@ -182,7 +182,7 @@
     formData.append('BuktiType', Bukti.type);
 
     // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbwFWBuJtmj25tl9-Inm0Yk8NTXQx8uSiKvtX_YnERpchkPOTryxmXMnpiZXiV-ZpQrBDA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycby_Bb-4U92Qg-LgyanW4PtWHQQbNmBHBme4eBaky_5d2izxQSgCdYxkpOSA8C4m2I3r0A/exec', {
      method: 'POST',
       body: formData
     })
