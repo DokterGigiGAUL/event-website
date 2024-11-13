@@ -149,16 +149,14 @@
           <p style="color:#888888;font-size:14px;font-weight:400;line-height:1.3em!important;margin-top:5px;padding-bottom:0px;">
             Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK BCA - 0342103829 an. AGAM FERRY ERWANA (file format jpg/png, max 10MB) </p>
 <!--            Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS (file format jpg/png, max 10MB) </p>-->
-        <input type="file" id="Bukti" name="Bukti" class="file-upload" required>
+        <input type="file" id="Bukti" name="Bukti" class="file-upload" accept="image/*" required>
       </div>
       <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
-      <button type="submit" class="btn-submit">Kirim</button>
-    </form>
-    <form id="registrationForm">
-    
+      <button type="submit" class="btn-submit" onclick="submitForm()">Kirim</button>
+    </form>    
   </div>
 
-  <script>
+ <!-- <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
@@ -192,6 +190,18 @@
         console.error('Error:', error);
       });
     });
-  </script>
+  </script>-->
+  <script>
+        function submitForm() {
+            var formData = new FormData(document.getElementById('registrationForm'));
+            fetch('https://script.google.com/macros/s/AKfycbzk1Wv4fQ7Wal2ubsRH3dsx2OsUs7XaaS-ezcL9XjoLqoUegX_-Md-mUKvcH9ToaSLw5Q/exec', { // Ganti dengan URL dari Google Apps Script
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => alert('Registrasi berhasil!'))
+            .catch(error => alert('Registrasi gagal: ' + error.message));
+        }
+    </script>
 </body>
 </html>
