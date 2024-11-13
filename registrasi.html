@@ -188,9 +188,14 @@
 })
 .then(response => response.json())
     .then(data => {
-      window.location.href = 'confirmation.html'; // Halaman konfirmasi
-    })
-    .catch(error => {
+  if (data.status === 'success') {
+    window.location.href = 'confirmation.html';
+  } else {
+    alert('Terjadi kesalahan dalam pengiriman data. Coba lagi nanti.');
+    console.error('Error:', data.error);
+  }
+})
+.catch(error => {
       alert('Terjadi kesalahan, coba lagi nanti.');
       console.error('Error:', error);
     });
