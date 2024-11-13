@@ -185,9 +185,8 @@
     };
 
     // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycby6FVWq-xoWXN_tDpRZ1w66FYjH5Ao0-8QhUwvDjXAYkBiFBCXVayFbFq8ckhWg2Unm/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyN8MPFOiLvMFAb-Tqr5DUvRzQBtRpy0wsAQ3qPjZBFgpCr7iWHYrmV8cFhLgMzbE6r/exec', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
     .then(response => response.json())
