@@ -158,38 +158,56 @@
 
   <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+  event.preventDefault();
 
-      // Simpan data dan arahkan ke halaman konfirmasi
-      const Nama = document.getElementById('Nama').value;
-      const Email = document.getElementById('Email').value;
-      const NIK = document.getElementById('NIK').value;
-      const WhatsApp = document.getElementById('WhatsApp').value;
-      const Status = document.querySelector('input[name="Status"]:checked').value;
-      const Bukti = document.getElementById('Bukti').files[0];
+  // Ambil data dari form
+  const Nama = document.getElementById('Nama').value;
+  const Email = document.getElementById('Email').value;
+  const NIK = document.getElementById('NIK').value;
+  const WhatsApp = document.getElementById('WhatsApp').value;
+  const Status = document.querySelector('input[name="Status"]:checked').value;
+  const BuktiFile = document.getElementById('Bukti').files[0];
 
-      const formData = new FormData();
-      formData.append('Nama', Nama);
-      formData.append('Email', Email);
-      formData.append('NIK', NIK);
-      formData.append('WhatsApp', WhatsApp);
-      formData.append('Status', Status);
-      formData.append('Bukti', Bukti);
+  // Fungsi untuk mengonversi file ke base64
+  const reader = new FileReader();
+  reader.onload = function() {
+    const base64File = reader.result;
 
-      fetch('https://script.google.com/macros/s/AKfycbwhFuK0G9n8k2_lBJNVcDHd8zM0HmhiLwxiwO7VgWBnJIeosz8Z4mzriRs634kg3xb2dA/exec', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
+    const formData = {
+      Nama: Nama,
+      Email: Email,
+      NIK: NIK,
+      WhatsApp: WhatsApp,
+      Status: Status,
+      Bukti: base64File,
+      fileName: BuktiFile.name,
+      fileType: BuktiFile.type
+    };
+
+    // Kirim data ke Google Apps Script
+    fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
         // Redirect ke halaman konfirmasi
         window.location.href = 'confirmation.html';
-      })
-      .catch(error => {
-        alert('Terjadi kesalahan, coba lagi nanti.');
-        console.error('Error:', error);
-      });
+      } else {
+        alert('Terjadi kesalahan: ' + data.message);
+      }
+    })
+    .catch(error => {
+      alert('Terjadi kesalahan, coba lagi nanti.');
+      console.error('Error:', error);
     });
+  };
+
+  reader.readAsDataURL(BuktiFile);
+});
+
   </script>
 
 </body>
