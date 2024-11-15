@@ -44,23 +44,24 @@ body {
 
   <p id="statusMessage"></p>
 </div>
-  <script>
-    const form = document.getElementById("waitingListForm");
-    const statusMessage = document.getElementById("statusMessage");
+<script>
+  const form = document.getElementById("waitingListForm");
+  const statusMessage = document.getElementById("statusMessage");
 
-    form.addEventListener('submit', function(event) {
-  event.preventDefault();
-      statusMessage.textContent = "Mengirim data...";
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah refresh halaman
 
-	const Nama = document.getElementById('Nama').value;
-	const WhatsApp = document.getElementById('WhatsApp').value;
-      
-	 const formData = {
+    statusMessage.textContent = "Mengirim data...";
+
+    const Nama = document.getElementById('Nama').value;
+    const WhatsApp = document.getElementById('WhatsApp').value;
+    
+    const formData = {
       Nama: Nama,
       WhatsApp: WhatsApp
     };
 
-fetch("https://script.google.com/macros/s/AKfycbymW3FYjTlePaeQIQ0fKXCwRcb4lWPabEcg-O8ZCGFhZb1fODhLzmI2pd65pbvff5aH/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbymW3FYjTlePaeQIQ0fKXCwRcb4lWPabEcg-O8ZCGFhZb1fODhLzmI2pd65pbvff5aH/exec", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
@@ -75,9 +76,7 @@ fetch("https://script.google.com/macros/s/AKfycbymW3FYjTlePaeQIQ0fKXCwRcb4lWPabE
       alert('Terjadi kesalahan, coba lagi nanti.');
       console.error('Error:', error);
     });
-  };
-
-});
-  </script>
+  });
+</script>
 </body>
 </html>
