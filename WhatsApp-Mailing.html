@@ -4,8 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-  /* Style CSS tetap sama */
-  </style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+	font-family: 'Inter', sans-serif; 
+	letter-spacing:-0.5px; 
+	color: #111111; 
+	line-height: 1.4;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width:auto;
+	}
+    .confirmation-container {
+      text-align: center;
+      padding: 20px;
+      width: 80%;
+    }    
+    h2{font-size:24px;font-weight:800;}
+    .label{font-size:19px;font-weight:600;padding:5px 10px 10px 10px;}
+    input{font-size:17px;padding:5px;border-radius: 1px solid #f9f9f9;}
+    button{font-size:17px;padding:10px 20px;background-color:#111111;color:#ffffff;border-radius:50px;}
+    </style>
   <title>Mailing List</title>
 </head>
 <body>
@@ -23,29 +44,25 @@
 
   <p id="statusMessage"></p>
 </div>
-<script>
-  const form = document.getElementById("waitingListForm");
-  const statusMessage = document.getElementById("statusMessage");
+  <script>
+    const form = document.getElementById("waitingListForm");
+    const statusMessage = document.getElementById("statusMessage");
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Mencegah refresh halaman
+    form.addEventListener('submit', function(event) {
+  event.preventDefault();
+      statusMessage.textContent = "Mengirim data...";
 
-    statusMessage.textContent = "Mengirim data...";
+	const Nama = document.getElementById('Nama').value;
+	const WhatsApp = document.getElementById('WhatsApp').value;
+      
+	const formData = new FormData();
 
-    const Nama = document.getElementById('Nama').value;
-    const WhatsApp = document.getElementById('WhatsApp').value;
-    
-    const formData = {
-      Nama: Nama,
-      WhatsApp: WhatsApp
-    };
+	formData.append('Nama', Nama);
+ 	formData.append('WhatsApp', WhatsApp);
 
-    fetch("https://script.google.com/macros/s/AKfycbzWbj8NCEMn-skHmNAVaQpOzLuahE3uU9obrYqHXuqKmg1LdGUa2T4E_OE01im4KiL1/exec", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json"
-      }
+fetch("https://script.google.com/macros/s/AKfycbymW3FYjTlePaeQIQ0fKXCwRcb4lWPabEcg-O8ZCGFhZb1fODhLzmI2pd65pbvff5aH/exec", {
+          method: "POST",
+          body: formData
     })
     .then(response => response.json())
     .then(data => {
@@ -55,7 +72,9 @@
       alert('Terjadi kesalahan, coba lagi nanti.');
       console.error('Error:', error);
     });
-  });
-</script>
+  };
+
+});
+  </script>
 </body>
 </html>
