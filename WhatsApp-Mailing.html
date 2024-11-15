@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+	font-family: 'Inter', sans-serif; 
+	letter-spacing:-0.5px; 
+	color: #111111; 
+	line-height: 1.4;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width:auto;
+	}
+    .confirmation-container {
+      text-align: center;
+      padding: 20px;
+      width: 80%;
+    }    
+    h2{font-size:24px;font-weight:800;}
+    .label{font-size:19px;font-weight:600;padding:5px 10px 10px 10px;}
+    input{font-size:17px;padding:5px;border-radius: 1px solid #f9f9f9;}
+    button{font-size:17px;padding:10px 20px;background-color:#111111;color:#ffffff;border-radius:50px;}
+    </style>
+  <title>Mailing List</title>
+</head>
+<body>
+<div class="confirmation-container">
+  <h2>Webinar Waiting List</h2>
+  <form id="waitingListForm">
+    <label for="Nama" style="display:block" class="label">Nama Lengkap:</label>
+    <input type="text" id="Nama" name="Nama" required><br><br>
+
+    <label for="WhatsApp" style="display:block" class="label">Nomor WhatsApp:</label>
+    <input type="text" id="WhatsApp" name="WhatsApp" required><br><br>
+
+    <button type="submit">Kirim data</button>
+  </form>
+
+  <p id="statusMessage"></p>
+</div>
+  <script>
+    const form = document.getElementById("waitingListForm");
+    const statusMessage = document.getElementById("statusMessage");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusMessage.textContent = "Mengirim data...";
+      
+      const formData = new FormData(form);
+      const data = {
+  Nama: formData.get("Nama"), 
+  WhatsApp: formData.get("WhatsApp"), 
+};
+
+
+      try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwfSI2ieixsQseiZQVz91kLarQcl__WLCb0v8RFxgMxUEVvpMPCFYU03f5KV9gbV1OZ/exec", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        });
+
+        const result = await response.json();
+        statusMessage.textContent = result.message || "Data berhasil dikirim!";
+        form.reset();
+      } catch (error) {
+        console.error("Error:", error);
+        statusMessage.textContent = "Gagal mengirim data.";
+      }
+    });
+  </script>
+</body>
+</html>
