@@ -62,6 +62,9 @@ body {
 
 fetch("https://script.google.com/macros/s/AKfycbymW3FYjTlePaeQIQ0fKXCwRcb4lWPabEcg-O8ZCGFhZb1fODhLzmI2pd65pbvff5aH/exec", {
           method: "POST",
+	headers: {
+        "Content-Type": "application/json"
+      }
           body: formData
     })
     .then(response => response.json())
