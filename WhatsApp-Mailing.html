@@ -31,7 +31,7 @@ body {
 </head>
 <body>
 <div class="confirmation-container">
-  <h2>Webinar WaitingList</h2>
+  <h2>Webinar Waiting List</h2>
   <form id="waitingListForm">
     <label for="Nama" style="display:block" class="label">Nama Lengkap:</label>
     <input type="text" id="Nama" name="Nama" required><br><br>
@@ -59,7 +59,7 @@ body {
 	formData.append('Nama', Nama);
  	formData.append('WhatsApp', WhatsApp);
 
-fetch("https://script.google.com/macros/s/AKfycbwp6UK_EP1h-HUS1eUyn6hpXnysS0H1zyH7xG2RhiK3ck7eeSt8ZI9U2Li1pAcMOGZY/exec", {
+fetch("https://script.google.com/macros/s/AKfycbyoqmjI9p9yK7voU_nchwFKpDu2RpyYB_ePW-3tAetJUUjk-bKzDLErISzXdPTnaple/exec", {
           method: "POST",
           body: formData
     })
