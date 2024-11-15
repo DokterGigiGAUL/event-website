@@ -47,7 +47,7 @@ header p {
 .section h2 {
             letter-spacing:-0.5px;
             color: #111111;
-            font-size: 1.8em;
+            font-size: 31px;
             text-align:-webkit-center;
             font-weight:800;
 		margin: 0px;
@@ -337,7 +337,7 @@ header p {
         }
     .card h3 {
             margin-top: 0;
-        font-size:1.3em;
+        font-size:24px;
         }
     /* Mobile styles - cards will stack */
         @media (max-width: 600px) {
