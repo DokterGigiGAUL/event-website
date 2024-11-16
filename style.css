@@ -19,12 +19,13 @@ header h1 {
 	margin: 0 auto;
 	font-size: 31px;
 	padding:0px 20px 0;
-	line-height:1.2em; font-weight:800;
+	line-height:1.2em; 
+	font-weight:800;
 	max-width:900px;
 	}
 header p {
             letter-spacing:-0.5px;
-            font-size: 24px;
+            font-size: 19px;
             margin: 10px auto;
             padding:0 30px;
             max-width:900px;
@@ -35,7 +36,7 @@ header p {
             object-fit: cover;
             margin: 0px auto 5px;
         }
-        .container {
+.container {
             max-width: 900px;
             margin: auto;
             padding: 0px;
@@ -90,13 +91,13 @@ header p {
             margin:3px 0px;
             color:#ffffff;
         }
-        .cta p {
+.cta p {
             color: white;
             font-weight: bold;
             padding:15px;
             margin:0px;
         }
-        .cta a {
+.cta a {
             color: white;
             font-weight: bold;
             text-decoration: none;
@@ -199,13 +200,13 @@ header p {
 	font-size:11px;padding-top:5px;margin-top:0px;
             text-align: center;
         }
-        .cta {
+.cta {
             background-color: #0071e3;
             color: white;
             font-weight:500;
             padding: 15px 60px;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 17px;
             border-radius: 80px;
             display: inline-flex;
             align-items: center;
@@ -337,7 +338,7 @@ header p {
         }
     .card h3 {
             margin-top: 0;
-        font-size:24px;
+        font-size:19px;
         }
     /* Mobile styles - cards will stack */
         @media (max-width: 600px) {
