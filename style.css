@@ -69,6 +69,15 @@ header p {
             margin: 10px 0px 0px;
             padding:0px;
         }
+.section1 h2 {
+            letter-spacing:-0.5px;
+            color: #111111;
+            font-size: 31px;
+            text-align:-webkit-center;
+            font-weight:800;
+		margin: 0px;
+    		padding: 30px 0;
+        }
 .card h2 {
             letter-spacing:-0.5px;
             color: #111111;
@@ -340,6 +349,7 @@ header p {
             margin-top: 0;
         font-size:24px;
         }
+
     /* Mobile styles - cards will stack */
         @media (max-width: 600px) {
         .section{
