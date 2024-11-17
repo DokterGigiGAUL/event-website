@@ -362,10 +362,9 @@ header p {
         @media (max-width: 600px) {
         .section{
                 padding:0px;
-                
         }
-        .section1 {
-                padding:30px 20px;
+.section1 {
+        padding:30px 20px;
 		background:#f0f0f0;
         }
 	.section h2 {
