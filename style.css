@@ -68,11 +68,11 @@ header p {
 .section1 {
             margin: 15px 0px 0px;
             padding:30px 20px;
-	background-color:#111111;
+	background-color:#f0f0f0;
         }
 .section1 h2 {
             letter-spacing:-0.5px;
-            color: #ffffff;
+            color: #111111;
             font-size: 31px;
             text-align:-webkit-center;
             font-weight:800;
