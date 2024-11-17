@@ -10,7 +10,7 @@ body {
 header {
 	background-color: #ffffff;
 	color: #333333;
-	padding: 0px;
+	padding: 0px 0px 15px;
 	text-align: center;
 	}
 
@@ -18,7 +18,7 @@ header h1 {
 	letter-spacing:-0.5px;
 	margin: 0 auto;
 	font-size: 31px;
-	padding:10px 30px;
+	padding:15px 30px;
 	line-height:1.2em; 
 	font-weight:800;
 	max-width:900px;
@@ -42,8 +42,8 @@ header p {
             padding: 0px;
         }
 .section {
-            margin: 10px 0px 0px;
-            padding: 15px 30px;
+            margin: 15px;
+            padding: 0px;
         }
 .section h2 {
             letter-spacing:-0.5px;
@@ -58,7 +58,7 @@ header p {
             letter-spacing:-0.5px;
             font-size: 1.1em;
             line-height: 1.4; 
-            margin:3px 0px;
+            margin:0px;
         }
         .sectionn {
             margin: 10px 0px 0px;
@@ -67,16 +67,17 @@ header p {
         }
 .section1 {
             margin: 15px 0px 0px;
-            padding:0px;
+            padding:30px;
+	background-color:#1111111;
         }
 .section1 h2 {
             letter-spacing:-0.5px;
-            color: #111111;
+            color: #ffffff;
             font-size: 31px;
             text-align:-webkit-center;
             font-weight:800;
 		margin: 0px;
-    		padding: 30px 0;
+    		padding: 0 0 30px 0;
         }
 .card h2 {
             letter-spacing:-0.5px;
@@ -85,7 +86,7 @@ header p {
             text-align:-webkit-center;
             font-weight:800;
 		margin-top:0px;
-		padding: 30px 0;
+		padding: 0 0 15px 0;
         }
         .sectionn h2 {
             letter-spacing:-0.5px;
@@ -203,7 +204,7 @@ header p {
         }
         .cta-button-container {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 .cta-button-container p {
 	font-size:11px;padding-top:15px;margin-top:0px;
@@ -335,12 +336,18 @@ header p {
             gap: 2rem;
             justify-content: center;
         }
+    .card-container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
     .card {
             background-color:#ffffff;
             border: 0px solid #ddd;
             border-radius: 20px;
             /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
-            padding: 15px 30px;
+            padding: 30px;
             text-align: center;
             flex: 1 1 300px;
             max-width: 100%;
@@ -353,11 +360,11 @@ header p {
     /* Mobile styles - cards will stack */
         @media (max-width: 600px) {
         .section{
-                padding:0px 30px;
+                padding:0px;
                 
         }
         .section1 {
-                padding:0 30px;
+                padding:30px;
         }
 	.section h2 {
             letter-spacing:-0.5px;
@@ -383,10 +390,16 @@ header p {
                 border-radius: 15px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
-            .card-container {
+	.card-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 30px;
+            justify-content: center;
+        }
+	.card-container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
             justify-content: center;
         }
             .carousel-card {
