@@ -365,7 +365,6 @@ table, th, td {
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -377,6 +376,8 @@ table, th, td {
 
     /* Mobile styles - cards will stack */
         @media (max-width: 600px) {
+	.column {
+    		width: 100%;}
         .section{
                 padding:0px;
         }
@@ -433,8 +434,7 @@ table, th, td {
 
         /* Tablet and desktop styles - cards will be side by side */
         @media (min-width: 600px) {
-		  .column {
-    width: 100%;}
+		  
             .card {
                 flex: 1 1 30%;
             }
