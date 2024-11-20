@@ -48,7 +48,7 @@ header p {
 .section h2 {
             letter-spacing:-0.5px;
             color: #111111;
-            font-size: 31px;
+            font-size: 26px;
             text-align:-webkit-center;
             font-weight:800;
 		margin: 0px;
@@ -56,7 +56,7 @@ header p {
         }
 .section p {
             letter-spacing:-0.5px;
-            font-size: 1.1em;
+            font-size: 17px;
             line-height: 1.3em; 
             margin:0px;
         }
@@ -73,7 +73,7 @@ header p {
 .section1 h2 {
             letter-spacing:-0.5px;
             color: #111111;
-            font-size: 31px;
+            font-size: 26px;
             text-align:-webkit-center;
             font-weight:800;
 		margin: 0px;
@@ -82,7 +82,7 @@ header p {
 .card h2 {
             letter-spacing:-0.5px;
             color: #111111;
-            font-size: 1.8em;
+            font-size: 21px;
             text-align:-webkit-center;
             font-weight:800;
 		margin-top:0px;
@@ -91,12 +91,12 @@ header p {
         .sectionn h2 {
             letter-spacing:-0.5px;
             color: #ffffff;
-            font-size: 31px;
+            font-size: 26px;
             text-align:-webkit-center;
         }
         .sectionn p {
             letter-spacing:-0.5px;
-            font-size: 1.1em;
+            font-size: 17px;
             line-height: 1.4; 
             margin:3px 0px;
             color:#ffffff;
@@ -164,13 +164,13 @@ header p {
         }
         .cta-section h2 {
                     letter-spacing:-0.5px;
-            font-size: 1.6em;
+            font-size: 26px;
             color: #111111;
             margin-bottom: 10px;
         }
         .cta-section p {
             letter-spacing:-0.5px;
-            font-size: 1.1em;
+            font-size: 17px;
             color: #111111;
             margin-bottom: 20px;
         }
@@ -184,7 +184,7 @@ header p {
             color: white;
             border: none;
             padding: 15px 20px;
-            font-size: 1.1em;
+            font-size: 17px;
             border-radius: 80px;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -229,7 +229,7 @@ header p {
             color: white;
             padding: 15px 30px;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 17px;
             border-radius: 80px;
             display: inline-flex;
             align-items: center;
@@ -240,7 +240,7 @@ header p {
             background-color: #003300; /* Warna hijau yang lebih gelap saat hover */
         }
         .whatsapp-button i {
-            font-size: 1.4em;
+            font-size: 19px;
         }
 
          /* Styling for the testimonials section */
@@ -280,7 +280,7 @@ header p {
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         .carousel-card p {
-            font-size: 1.1rem;
+            font-size: 17px;
             margin-bottom: 1rem;
         }
         .carousel-card h4 {
@@ -355,7 +355,7 @@ header p {
         }
     .card h3 {
             margin-top: 0;
-        font-size:24px;line-height:1.3em;
+        font-size:21px;line-height:1.3em;
         }
 table, th, td {
   border:1px solid black;
@@ -393,7 +393,7 @@ table, th, td {
 	.section h2 {
             	letter-spacing:-0.5px;
             	color: #111111;
-            	font-size: 1.8em;
+            	font-size: 26px;
             	text-align:-webkit-center;
            	font-weight:800;
 		margin: 0px;
