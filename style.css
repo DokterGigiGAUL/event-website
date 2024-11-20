@@ -6,7 +6,6 @@ body {
 	background-color: #ffffff; 
 	color: #111111; 
 	line-height: 1.4;
-	font-size:85%;
 	}
 header {
 	background-color: #ffffff;
@@ -18,7 +17,7 @@ header {
 header h1 {
 	letter-spacing:-0.5px;
 	margin: 0 auto;
-	font-size: 31px;
+	font-size: 26px;
 	padding:15px 30px;
 	line-height:1.2em; 
 	font-weight:800;
@@ -26,7 +25,7 @@ header h1 {
 	}
 header p {
             letter-spacing:-0.5px;
-            font-size: 19px;
+            font-size: 16px;
             margin: 0px auto 0;
             padding:0 30px;
             max-width:900px;
