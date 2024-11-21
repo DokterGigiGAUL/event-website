@@ -68,7 +68,7 @@ header p {
 .section1 {
             margin: 15px 0px 0px;
             padding:30px 20px;
-	background-color:#f0f0f0;
+	background-color:#d1d5db;
         }
 .section1 h2 {
             letter-spacing:-0.5px;
@@ -180,7 +180,7 @@ header p {
             gap: 20px;
         }
         .cta-button {
-            background-color: #0071e3;
+            background-color: #008080;
             color: white;
             border: none;
             padding: 15px 20px;
@@ -212,7 +212,7 @@ header p {
             text-align: center;
         }
 .cta {
-            background-color: #cccccc;
+            background-color: #008080;
             color: white;
             font-weight:500;
             padding: 15px 60px;
@@ -388,7 +388,7 @@ table, th, td {
         }
 .section1 {
         padding:30px 20px;
-		background:#f0f0f0;
+		background:#d1d5db;
         }
 	.section h2 {
             	letter-spacing:-0.5px;
