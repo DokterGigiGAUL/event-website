@@ -432,7 +432,7 @@ table, th, td {
 		padding: 20px 15px;
             }
             .hero-image2 {
-                max-width: 720px;
+                max-width: 100%;
                 height: 50vw;
                 object-fit: cover;
                 margin: 0px auto 15px;
@@ -500,7 +500,7 @@ table, th, td {
                 flex: 1 1 30%;
             }
             .hero-image2 {
-                max-width: 100%;
+                max-width: 720px;
                 height: 25vw;
                 object-fit: cover;
                 margin: 0px auto 5px;
