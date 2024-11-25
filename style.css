@@ -382,6 +382,34 @@ table, th, td {
 
     /* Mobile styles - cards will stack */
         @media (max-width: 600px) {
+	.section2 {display:none;
+            margin: 15px 0px 0px;
+            padding:30px 20px;
+	background-color:#d1d5db;
+        }
+.section2 h2 {
+            letter-spacing:-0.5px;
+            color: #111111;
+            font-size: 26px;
+            text-align:-webkit-center;
+            font-weight:800;
+		margin: 0px;
+    		padding: 0 0 30px 0;
+        }
+	.section3 {
+            margin: 15px 0px 0px;
+            padding:30px 20px;
+	background-color:#d1d5db;
+        }
+.section3 h2 {
+            letter-spacing:-0.5px;
+            color: #111111;
+            font-size: 26px;
+            text-align:-webkit-center;
+            font-weight:800;
+		margin: 0px;
+    		padding: 0 0 30px 0;
+        }	
 	.column {
     		width: 100%;}
         .section{
@@ -404,7 +432,7 @@ table, th, td {
 		padding: 20px 15px;
             }
             .hero-image2 {
-                max-width: 100%;
+                max-width: 720px;
                 height: 50vw;
                 object-fit: cover;
                 margin: 0px auto 15px;
@@ -440,7 +468,34 @@ table, th, td {
 
         /* Tablet and desktop styles - cards will be side by side */
         @media (min-width: 600px) {
-		  
+	.section2 {
+            margin: 15px 0px 0px;
+            padding:30px 20px;
+	background-color:#d1d5db;
+        }
+.section2 h2 {
+            letter-spacing:-0.5px;
+            color: #111111;
+            font-size: 26px;
+            text-align:-webkit-center;
+            font-weight:800;
+		margin: 0px;
+    		padding: 0 0 30px 0;
+        }
+	.section3 {display:none;
+            margin: 15px 0px 0px;
+            padding:30px 20px;
+	background-color:#d1d5db;
+        }
+.section3 h2 {
+            letter-spacing:-0.5px;
+            color: #111111;
+            font-size: 26px;
+            text-align:-webkit-center;
+            font-weight:800;
+		margin: 0px;
+    		padding: 0 0 30px 0;
+        }		  
             .card {
                 flex: 1 1 30%;
             }
@@ -452,7 +507,7 @@ table, th, td {
                 object-position:top;
             }
             .webinar-poster {
-                max-width: 60%;
+                max-width: 80%;
                 height: auto;
                 margin: 20px 0;
                 border-radius: 15px;
